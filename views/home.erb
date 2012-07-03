@@ -1,10 +1,11 @@
 <section id="add">
-  <form action="/" method="post">
-    <textarea name="content" placeholder="Enter a note to yourself!"></textarea>
-    <input type="submit" value="Take Note!">
+  <form  action="/" method="post">
+    <textarea id="contentBox" name="content" placeholder="Enter a note to yourself!"></textarea>
+    <input type="submit" value="Take Note!" id="create_note">
   </form>
 </section>
 
+<div id="all_messages_area">
 <% @notes.each do |note| %>
   <article <%= 'class="complete"' if note.complete %>>
     <p>
@@ -18,6 +19,7 @@
         Done!
       <% end %>
     </p>
-    <p class="meta">Created: <%= note.created_at %></p>
+    <class="meta">Created: <%= note.created_at %></p>
   </article>
 <% end %>
+</div>

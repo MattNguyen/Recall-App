@@ -1,0 +1,14 @@
+<article <%= 'class="complete"' if @note.complete %>>
+  <p>
+    <%= @note.content %>
+    <span><a href="/<%= @note.id %>">[edit]</a></span>
+  </p>
+  <p class="complete_button">
+    <% if !@note.complete %>
+      <a href="/<%= @note.id %>/complete">Mark as Complete</a>
+    <% else %>
+      Done!
+    <% end %>
+  </p>
+  <class="meta">Created: <%= @note.created_at %></p>
+</article>

@@ -15,7 +15,8 @@ post '/' do;
   n.created_at = Time.now
   n.updated_at = Time.now
   n.save
-  redirect '/'
+  @note = n
+  erb :note, :layout => false
 end
 
 # Single Notes Pages
