@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'sinatra'
+require 'shotgun'
 require 'data_mapper'
 
 # Home Page
