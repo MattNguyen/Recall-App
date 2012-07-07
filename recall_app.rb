@@ -1,7 +1,10 @@
 require 'rubygems'
+require 'bundler'
+Bundler.require
 require 'sinatra'
 require 'shotgun'
 require 'data_mapper'
+require 'dm-sqlite-adapter'
 
 # Home Page
 get '/' do;
